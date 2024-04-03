@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/laptop.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+
+    <title>Assignment 03</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="banner" style="padding: 50px">
+        <h1>Đặng Thị Thủy Tiên</h1>
+        <span>Full Stack Developer</span>
+      </div>
+    </header>
+
+    <section id="nav-bar">
+      <nav class="container">
+        <a class="nav">
+          <td><i class="icon-user"></i></td>
+          Thông tin
+        </a>
+        <a class="nav">
+          <td><i class="icon-doc-text-inv"></i></td>
+          Lý lịch
+        </a>
+        <a class="nav3">
+          <td>
+            <div class="name">Đặng Thị Thủy Tiên</div>
+            <div>Full Stack Developer</div>
+          </td>
+        </a>
+        <a class="nav">
+          <td><i class="icon-mail-alt"></i></td>
+          Chứng chỉ
+        </a>
+        <a class="nav">
+          <td><i class="icon-star-1"></i></td>
+          Dự Án
+        </a>
+      </nav>
+    </section>
+    <!-- MỤC TIÊU NGHỀ NGHIỆP -->
+    <section id="about" class="bg-grey">
+      <div class="container">
+        <div class="target">
+          <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
+          <p>
+            Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh Nghiệp
+            của FUNiX. Em mong muốn mình sẽ được làm việc với vị trí Fullstack
+            Developer, có thể vận dụng những kiến thức đã được trau dồi và không
+            ngừng học hỏi để phát triển bản thân, cũng như hoàn thành tốt nhất
+            công việc được giao.
+          </p>
+        </div>
+        <div id="personal-info" style="display: none">
+          <!-- Đây là nơi hiển thị thông tin cá nhân sau khi nhập email -->
+          <ul class="mt-40 info" style="padding-left: 0px">
+            <li>
+              <span><strong>Giới tính</strong></span> : Nữ
+            </li>
+            <li>
+              <span><strong>Ngày sinh</strong></span> : 19/05/2005
+            </li>
+            <li>
+              <span><strong>Điện thoại</strong></span> : (+84) 9127347xxx
+            </li>
+            <li>
+              <span><strong>Email</strong></span> : sinhvien@funix.edu.vn
+            </li>
+            <li>
+              <span><strong>Địa chỉ</strong></span> : Tô Ký, HCM
+            </li>
+            <li>
+              <span><strong>Website</strong></span> :
+              <a href="https://abc.tech">https://abc.tech</a>
+            </li>
+          </ul>
+
+          <div class="icon">
+            <i class="icon-twitter"></i>
+            <i class="icon-facebook"></i>
+            <i class="icon-gplus"></i>
+            <i class="icon-linkedin"></i>
+          </div>
+        </div>
+
+        <div id="email-form">
+          <label for="email">Nhập email của bạn:</label>
+          <input type="email" id="email" required />
+          <button onclick="validateEmail()">Xác nhận</button>
+        </div>
+
+        <script>
+          function validateEmail() {
+            var emailInput = document.getElementById("email").value;
+            // Kiểm tra định dạng email bằng biểu thức chính quy
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput.match(emailPattern)) {
+              // Hiển thị thông tin cá nhân nếu email hợp lệ
+              document.getElementById("personal-info").style.display = "block";
+              // Ẩn form nhập email
+              document.getElementById("email-form").style.display = "none";
+            } else {
+              alert("Vui lòng nhập một địa chỉ email hợp lệ.");
+            }
+          }
+        </script>
+      </div>
+    </section>
+    <!-- KHỐI BAO QUANH NHIỀU KHỐI -->
+    <section>
+      <!-- KINH NGHIỆM LÀM VIỆC -->
+      <div class="container">
+        <div class="box">
+          <div class="experience">
+            <div class="experience-title">
+              <h2>Kinh nghiệm</h2>
+            </div>
+            <div class="icon-toolbox">
+              <i style="font-size: 42px" class="ic-toolbox"></i>
+            </div>
+            <div class="experience-content" style="padding-left: 15px">
+              <div class="experience-1">
+                <div class="content">
+                  <h3>Full Stack Developer - Công ty Y</h3>
+                  <div class="date">
+                    05/2022-<strong class="know">hiện tại</strong>
+                  </div>
+                  <p>
+                    -Xây dựng phát triển website dựa trên thiết kế và yêu cầu đã
+                    có.
+                  </p>
+                  <p>
+                    Phân tích và thiết kế database.Sử dụng các hệ quản trị
+                    CSDL(MySQL SQL sever,NoSQL...) và viết được các câu truy vấn
+                  </p>
+                  <p>
+                    -Sử dụng ngôn ngữ sever-side(Python,java...để xây dựng các
+                    web Service
+                  </p>
+                </div>
+              </div>
+              <div class="experience-2">
+                <div class="content" style="padding-top: 15px">
+                  <h3>Web Designer - Công ty X</h3>
+                  <div class="date">06/2021-04/2022</div>
+                  <p>-Thiết kế web dựa trên yêu cầu của khách hàng.</p>
+                  <p>-Sử dụng công cụ Figma,Canva,PTS.</p>
+                </div>
+              </div>
+            </div>
+            <script>
+              // Lặp qua mỗi phần tử khối kinh nghiệm
+              document
+                .querySelectorAll(".experience-content")
+                .forEach((experience) => {
+                  const viewMoreBtn = document.createElement("button");
+                  viewMoreBtn.textContent = "View More";
+                  viewMoreBtn.classList.add("view-more-btn");
+                  let isExpanded = false;
+
+                  // Thêm nút "View More"
+                  experience.appendChild(viewMoreBtn);
+
+                  // Sự kiện click cho nút "View More"
+                  viewMoreBtn.addEventListener("click", () => {
+                    isExpanded = !isExpanded;
+
+                    // Hiển thị hoặc ẩn thông tin kinh nghiệm
+                    const experienceDetails =
+                      experience.querySelectorAll(".content");
+                    experienceDetails.forEach((detail) => {
+                      detail.style.display = isExpanded ? "block" : "none";
+                    });
+
+                    // Thay đổi văn bản của nút
+                    viewMoreBtn.textContent = isExpanded
+                      ? "View Less"
+                      : "View More";
+                  });
+
+                  // Sự kiện hover để hiển thị nút "View More"
+                  experience.addEventListener("mouseover", () => {
+                    viewMoreBtn.style.display = "block";
+                  });
+
+                  // Sự kiện hover để ẩn nút "View More"
+                  experience.addEventListener("mouseleave", () => {
+                    if (!isExpanded) {
+                      viewMoreBtn.style.display = "none";
+                    }
+                  });
+                });
+            </script>
+          </div>
+
+          <!-- KỸ NĂNG -->
+          <div class="skills">
+            <div class="skills-title">
+              <h2>Kỹ năng</h2>
+            </div>
+            <div class="icon-toolss">
+              <i style="font-size: 42px" class="ic-tools-2"></i>
+            </div>
+            <div class="skills-content">
+              <p class="skill-icons">HTML/CSS:Fundamental</p>
+              <span class="green"></span>
+              <span class="nau"></span>
+              <span class="nau"></span>
+              <p class="skill-icons">Javascrip:Intermediate</p>
+              <span class="green"></span>
+              <span class="green"></span>
+              <span class="nau"></span>
+              <p class="skill-icons">Node JS:Intermediate</p>
+              <span class="green"></span>
+              <span class="green"></span>
+              <span class="nau"></span>
+              <p class="skill-icons">Bootstrap 5:Fundamental</p>
+              <span class="green"></span>
+              <span class="nau"></span>
+              <span class="nau"></span>
+            </div>
+            <script>
+              // Lặp qua mỗi phần tử kỹ năng
+              document.querySelectorAll(".skills-content").forEach((skill) => {
+                const viewMoreBtn = document.createElement("button");
+                viewMoreBtn.textContent = "View More";
+                viewMoreBtn.classList.add("view-more-btn");
+                let isExpanded = false;
+
+                // Thêm nút "View More"
+                skill.appendChild(viewMoreBtn);
+
+                // Sự kiện click cho nút "View More"
+                viewMoreBtn.addEventListener("click", () => {
+                  isExpanded = !isExpanded;
+
+                  // Hiển thị hoặc ẩn thông tin kỹ năng
+                  const skillDetails = skill.querySelectorAll(".skill-icons");
+                  skillDetails.forEach((detail) => {
+                    detail.style.display = isExpanded ? "block" : "none";
+                  });
+
+                  // Thay đổi văn bản của nút
+                  viewMoreBtn.textContent = isExpanded
+                    ? "View Less"
+                    : "View More";
+                });
+
+                // Sự kiện hover để hiển thị nút "View More"
+                skill.addEventListener("mouseover", () => {
+                  viewMoreBtn.style.display = "block";
+                });
+
+                // Sự kiện hover để ẩn nút "View More"
+                skill.addEventListener("mouseleave", () => {
+                  if (!isExpanded) {
+                    viewMoreBtn.style.display = "none";
+                  }
+                });
+              });
+            </script>
+          </div>
+
+          <!-- NGÔN NGỮ	 -->
+          <div class="langguage">
+            <div class="langguage-title">
+              <h2>Ngôn ngữ</h2>
+            </div>
+            <div class="icon-mics">
+              <i style="font-size: 42px" class="ic-mic"></i>
+            </div>
+            <div class="langguage-content">
+              <p class="language-icon">Tiếng Anh-IELTS 7.0</p>
+              <span class="green"></span><span class="green"></span
+              ><span class="nau"></span>
+              <p class="language-icon">Tiếng Nhật-JLPT N4</p>
+              <span class="green"></span><span class="nau"></span
+              ><span class="nau"></span>
+            </div>
+            <script>
+              // Lặp qua mỗi phần tử khối ngôn ngữ
+              document
+                .querySelectorAll(".langguage-content")
+                .forEach((language) => {
+                  const viewMoreBtn = document.createElement("button");
+                  viewMoreBtn.textContent = "View More";
+                  viewMoreBtn.classList.add("view-more-btn");
+                  let isExpanded = false;
+
+                  // Thêm nút "View More"
+                  language.appendChild(viewMoreBtn);
+
+                  // Sự kiện click cho nút "View More"
+                  viewMoreBtn.addEventListener("click", () => {
+                    isExpanded = !isExpanded;
+
+                    // Hiển thị hoặc ẩn thông tin ngôn ngữ
+                    const languageDetails =
+                      language.querySelectorAll(".language-icon");
+                    languageDetails.forEach((detail) => {
+                      detail.style.display = isExpanded ? "block" : "none";
+                    });
+
+                    // Thay đổi văn bản của nút
+                    viewMoreBtn.textContent = isExpanded
+                      ? "View Less"
+                      : "View More";
+                  });
+
+                  // Sự kiện hover để hiển thị nút "View More"
+                  language.addEventListener("mouseover", () => {
+                    viewMoreBtn.style.display = "block";
+                  });
+
+                  // Sự kiện hover để ẩn nút "View More"
+                  language.addEventListener("mouseleave", () => {
+                    if (!isExpanded) {
+                      viewMoreBtn.style.display = "none";
+                    }
+                  });
+                });
+            </script>
+          </div>
+
+          <!-- HOẠT ĐỘNG	  -->
+          <div class="work">
+            <div class="work-title">
+              <h2>Hoạt động</h2>
+            </div>
+            <div class="icon-toolboxx">
+              <i style="font-size: 42px" class="ic-toolbox"></i>
+            </div>
+            <div class="work-content" style="padding-left: 15px">
+              <div class="work-1">
+                <div class="content">
+                  <h3>FPT Edu hackathon 2019</h3>
+                  <div class="date">03/2019-05/2019</div>
+                  <p>Giải 3 bằng A</p>
+                  <p>Đề tài trang web về phân loại rác thải</p>
+                </div>
+              </div>
+              <div class="work2">
+                <div class="content" style="padding-top: 15px">
+                  <h3>Câu lạc bộ Z</h3>
+                  <div class="date">08/2016-08/2017</div>
+                  <p>Trưởng ban chuyên môn</p>
+                </div>
+              </div>
+            </div>
+            <script>
+              // Lặp qua mỗi phần tử khối hoạt động
+              document.querySelectorAll(".work-content").forEach((work) => {
+                const viewMoreBtn = document.createElement("button");
+                viewMoreBtn.textContent = "View More";
+                viewMoreBtn.classList.add("view-more-btn");
+                let isExpanded = false;
+
+                // Thêm nút "View More"
+                work.appendChild(viewMoreBtn);
+
+                // Sự kiện click cho nút "View More"
+                viewMoreBtn.addEventListener("click", () => {
+                  isExpanded = !isExpanded;
+
+                  // Hiển thị hoặc ẩn thông tin hoạt động
+                  const workDetails = work.querySelectorAll(".content");
+                  workDetails.forEach((detail) => {
+                    detail.style.display = isExpanded ? "block" : "none";
+                  });
+
+                  // Thay đổi văn bản của nút
+                  viewMoreBtn.textContent = isExpanded
+                    ? "View Less"
+                    : "View More";
+                });
+
+                // Sự kiện hover để hiển thị nút "View More"
+                work.addEventListener("mouseover", () => {
+                  viewMoreBtn.style.display = "block";
+                });
+
+                // Sự kiện hover để ẩn nút "View More"
+                work.addEventListener("mouseleave", () => {
+                  if (!isExpanded) {
+                    viewMoreBtn.style.display = "none";
+                  }
+                });
+              });
+            </script>
+          </div>
+
+          <!-- HỌC VẤN -->
+          <div class="education">
+            <div class="education-title">
+              <h2>Học vấn</h2>
+            </div>
+            <div class="icon-pencils">
+              <i style="font-size: 42px" class="ic-pencil"></i>
+            </div>
+            <div class="education-content" style="padding-left: 15px">
+              <div class="information">
+                <div class="content">
+                  <h3>FUNIX</h3>
+                  <div class="date">06/2021-05/2022</div>
+                  <p>tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack.</p>
+                  <p>GPA:9/10</p>
+                </div>
+              </div>
+              <div class="information-2" style="padding-top: 30px">
+                <div class="content">
+                  <h3>Cử nhân-ĐH-FPT</h3>
+                  <div class="date">08/2016-07/2019</div>
+                  <p>Chuyên ngành:Kỹ thuật phần mềm.</p>
+                  <p>GPA 3.4/4</p>
+                </div>
+              </div>
+            </div>
+            <script>
+              // Hàm xử lý cho khối học vấn
+              function handleEducationBlock(educationBlock) {
+                const viewMoreBtn = document.createElement("button"); // Tạo một nút "View More"
+                viewMoreBtn.textContent = "View More"; // Đặt nội dung của nút "View More"
+                let isExpanded = false; // Biến để theo dõi trạng thái mở rộng
+
+                // Sự kiện click cho nút "View More"
+                viewMoreBtn.addEventListener("click", () => {
+                  isExpanded = !isExpanded; // Đảo ngược trạng thái mở rộng
+
+                  // Hiển thị hoặc ẩn thông tin chi tiết
+                  const details = educationBlock.querySelectorAll("p");
+                  details.forEach((detail, index) => {
+                    // Bắt đầu từ index 1 để tránh ẩn/hiện nút "View More"
+                    if (index > 0) {
+                      detail.style.display = isExpanded ? "block" : "none";
+                    }
+                  });
+
+                  // Thay đổi văn bản của nút "View More"
+                  viewMoreBtn.textContent = isExpanded
+                    ? "View Less"
+                    : "View More";
+                });
+
+                // Thêm nút "View More" vào khối học vấn
+                educationBlock.appendChild(viewMoreBtn);
+              }
+
+              // Lấy tất cả các khối học vấn và gọi hàm xử lý cho mỗi khối
+              const educationBlocks =
+                document.querySelectorAll(".education-content");
+              educationBlocks.forEach(handleEducationBlock);
+            </script>
+          </div>
+
+          <!-- SỞ THÍCH -->
+          <div class="like">
+            <div class="like-title">
+              <h2>Sở thích</h2>
+            </div>
+            <div class="icon-telescopes">
+              <i style="font-size: 42px" class="ic-telescope"></i>
+            </div>
+            <div class="like-content">
+              <div class="likes">
+                <td><i style="font-size: 16px" class="ic-megaphone"></i></td>
+                <p class="like1">Âm nhạc</p>
+              </div>
+              <div class="likes">
+                <td><i style="font-size: 16px" class="ic-strategy"></i></td>
+                <p class="like2">Chơi game</p>
+              </div>
+              <div class="likes">
+                <td>
+                  <i style="font-size: 16px" class="ic-hotairballoon"></i>
+                </td>
+                <p class="like3">Du lịch</p>
+              </div>
+              <div class="likes">
+                <td><i style="font-size: 16px" class="ic-basket"></i></td>
+                <p class="like4">Nấu ăn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Lặp qua mỗi phần tử khối sở thích
+        document.querySelectorAll(".like-content").forEach((like) => {
+          const viewMoreBtn = document.createElement("button");
+          viewMoreBtn.textContent = "View More";
+          viewMoreBtn.classList.add("view-more-btn");
+          let isExpanded = false;
+
+          // Thêm nút "View More"
+          like.appendChild(viewMoreBtn);
+
+          // Sự kiện click cho nút "View More"
+          viewMoreBtn.addEventListener("click", () => {
+            isExpanded = !isExpanded;
+
+            // Hiển thị hoặc ẩn thông tin sở thích
+            const likeDetails = like.querySelectorAll(".likes");
+            likeDetails.forEach((detail) => {
+              detail.style.display = isExpanded ? "block" : "none";
+            });
+
+            // Thay đổi văn bản của nút
+            viewMoreBtn.textContent = isExpanded ? "View Less" : "View More";
+          });
+
+          // Sự kiện hover để hiển thị nút "View More"
+          like.addEventListener("mouseover", () => {
+            viewMoreBtn.style.display = "block";
+          });
+
+          // Sự kiện hover để ẩn nút "View More"
+          like.addEventListener("mouseleave", () => {
+            if (!isExpanded) {
+              viewMoreBtn.style.display = "none";
+            }
+          });
+        });
+      </script>
+    </section>
+    <!-- CHỨNG CHỈ GIẢI THƯỞNG -->
+    <section class="test1 mt-5">
+      <div class="cotainer">
+        <div id="certificate" class="bg-grey">
+          <h2 class="section-title">Chứng chỉ - Giải thưởng</h2>
+          <div class="box-1">
+            <div class="certificate-award1">
+              <div class="cert1">
+                <img
+                  src="images/Cert_DBI.png"
+                  alt="ảnh chứng chỉ"
+                  class="cert1-1"
+                />
+              </div>
+              <div class="certificate-content1">
+                <h3 class="certificate-title1">
+                  CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX
+                </h3>
+                <p>-Chứng chỉ thuộc chương trình CCDN</p>
+                <p>-GPA:8.6</p>
+              </div>
+            </div>
+            <div class="certificate-award2">
+              <div class="cert2">
+                <img
+                  src="images/Cert_DBI.png"
+                  alt="ảnh chứng chỉ"
+                  class="cert1-2"
+                />
+              </div>
+              <div class="certificate-content2">
+                <h3 class="certificate-title2">
+                  CHỨNG CHỈ LẬP TRÌNH JAVASCRIPT-FUNIX
+                </h3>
+                <p>-Chứng chỉ thuộc chương trình CCDN</p>
+                <p>-GPA:8.9</p>
+              </div>
+            </div>
+          </div>
+          <div class="box-2">
+            <div class="certificate-award3">
+              <div class="cert3">
+                <img
+                  src="images/Cert_DBI.png"
+                  alt="ảnh chứng chỉ"
+                  class="cert1-3"
+                />
+              </div>
+              <div class="certificate-content3">
+                <h3 class="certificate-title3">
+                  CHỨNG CHỈ THIẾT KẾ DATABASE-FUNIX
+                </h3>
+                <p>-Chứng chỉ thuộc chương trình CCDN</p>
+                <p>-GPA:8.0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ĐÂY LÀ KHỐI DỰ ÁN -->
+    <section class="test2">
+      <div class="container">
+        <div id="project">
+          <div class="project-title">
+            <h2>DỰ ÁN</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 d-flex">
+              <div class="project-border">
+                <div class="item1">
+                  <img src="images/project_1.png" class="item1-img" />
+                </div>
+                <div class="item2">
+                  <h3 class="cv-title">CV CÁ NHÂN</h3>
+                </div>
+                <div class="item3">
+                  <p class="year">2021</p>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                      />
+                    </svg>
+                    FUNIX
+                  </p>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+                      />
+                    </svg>
+                    Developer
+                  </p>
+                </div>
+                <table>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Mô tả:</p>
+                      <p class="last">
+                        Trang web CV cá nhân online .Gồm các cá nhân củng như kỹ
+                        năng nghề nghiệp
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Nhiệm vụ:</p>
+                      <p class="last">
+                        -Phát triển code -Review code-tối ưu code-xủ lý lỗi
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Công nghệ:</p>
+                      <p class="last">HTML,CSS,</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 d-flex">
+              <div class="project-border">
+                <div class="item1">
+                  <img src="images/project_2.png" class="item1-img" />
+                </div>
+                <div class="item2">
+                  <h3 class="cv-title">TRANG WEB QUẢN LÝ THÚ CƯNG</h3>
+                </div>
+                <div class="item3">
+                  <p class="year">2021</p>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                      />
+                    </svg>
+                    FUNIX
+                  </p>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+                      />
+                    </svg>
+                    Developer
+                  </p>
+                </div>
+                <table>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Mô tả:</p>
+                      <p class="last">
+                        Ứng dụng giúp quản lý thông tin thú cưng như:cân nặng,
+                        giống, tình trạng tiêm chủng ...Bao gồm các chức năng
+                        thêm,sữa, xóa.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Nhiệm vụ:</p>
+                      <p class="last">
+                        -Phát triển code -Review code-tối ưu code-xủ lý lỗi
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Công nghệ:</p>
+                      <p class="last">HTML,CSS,Javascrip</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 d-flex">
+              <div class="project-border">
+                <div class="item1">
+                  <img src="images/project_3.png" class="item1-img" />
+                </div>
+                <div class="item2">
+                  <h3 class="cv-title">TRANG WEB XEM TIN TỨC</h3>
+                </div>
+                <div class="item3">
+                  <p class="year">2021</p>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                      />
+                    </svg>
+                    FUNIX
+                  </p>
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+                      />
+                    </svg>
+                    Developer
+                  </p>
+                </div>
+                <table>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Mô tả:</p>
+                      <p class="last">
+                        Trang web xem tin tức từ nhiều ngôn khác nhau,người dùng
+                        có thể tìm kiếm các tin tức dựa theo các từ khóa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Nhiệm vụ:</p>
+                      <p class="last">
+                        -Phát triển code -Review code-tối ưu code-xủ lý lỗi
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="item">
+                      <p class="start">Công nghệ:</p>
+                      <p class="last">HTML,CSS,Javascrip</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer" class="bg-grey">
+      <div class="container">
+        <ul>
+          <li>
+            <i style="font-size: 42px" class="icon-facebook-circled"></i
+            >Facebook
+          </li>
+          <li>
+            <i style="font-size: 42px" class="icon-linkedin-circled"></i
+            >Linkedin
+          </li>
+          <li>
+            <i style="font-size: 42px" class="icon-github-circled"></i>Github
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
